@@ -78,7 +78,7 @@ export default function PriceAlerts({ alerts, setAlerts, currency, usdToInrRate,
       }
 
       // Register or find service worker
-      const registration = await navigator.serviceWorker.register('/sw.js');
+      const registration = await navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`);
       console.log('Service Worker registered with scope:', registration.scope);
 
       // Fetch VAPID public key
